@@ -1,0 +1,12 @@
+# Dépendances (recréées avec npm install)
+node_modules/
+
+# Variables d'environnement locales
+.env
+
+# Données GTFS (à télécharger, voir README)
+data/*
+!data/.gitkeep
+
+# Fichiers système
+.DS_Store

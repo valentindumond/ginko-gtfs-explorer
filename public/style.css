@@ -1,0 +1,62 @@
+body {
+   margin: 0;
+   background-color: white;
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #000033;
+    color: white;
+    padding: 15px 15px 25px;
+}
+
+header h1{
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+nav span,
+nav a{
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+body > ul {
+    width: 60%;
+    margin: 30px auto;
+}
+
+body > ul li {
+    list-style-type:  "📍 ";
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+
+details{
+    margin: 10px auto;
+    width: 80%;
+    cursor: pointer;
+}
+
+summary{
+    padding: 5px;
+}
+
+details ul{
+    background-color: white;
+    color: black;
+}
+
+details li{
+    padding: 5px;
+}

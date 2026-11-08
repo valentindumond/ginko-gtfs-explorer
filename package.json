@@ -1,0 +1,19 @@
+{
+  "name": "ginko-gtfs-explorer",
+  "version": "1.0.0",
+  "description": "Serveur Express qui lit les données GTFS du réseau Ginko (Besançon) et affiche lignes et stations",
+  "license": "ISC",
+  "author": "Fred Dadeau",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "pug": "^3.0.4"
+  }
+}
