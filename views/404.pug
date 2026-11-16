@@ -1,7 +1,6 @@
-doctype html
-html
-  head
-    title Erreur 404
-    link(rel="stylesheet",href="style.css")
-  body
-    h1 Erreur 404 : ressource inexistante   
+extends layout 
+
+block content 
+    h2 La ressource demandée <code>#{url}</code> n'existe pas !
+
+    .error404 Erreur <br> 4&#128557;4

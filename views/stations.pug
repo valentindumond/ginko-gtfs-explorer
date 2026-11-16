@@ -1,15 +1,6 @@
-doctype html 
-html
-    head
-        title Stations du réseau Ginko 
-        link(rel="stylesheet", href="style.css")
-    body 
-        header
-            h1 Noms des stations du réseau
-            nav
-                span ≡
-                a(href="/lignes") Lignes
-                a(href="/stations") Stations
-        ul 
-            each station in stations
-                li #{station.name}
+extends layout 
+
+block content 
+    ul.stops
+        each id of Object.keys(stops).filter(o => !stops[o].parent).sort((a,b) => a.localeCompare(b))
+            li(data-id=`${id}`) #{stops[id].name.substring(1,stops[id].name.length-1)}

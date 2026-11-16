@@ -1,62 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-   margin: 0;
-   background-color: white;
-   color: black;
-   font-family: Arial, Helvetica, sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-header{
-    background-color: #000033;
+
+/**** DEBUT DE LA FEUILLE DE STYLE PERSONNALISEE ****/
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+em {
+    font-style: italic;
+}
+
+h1, h2 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+}
+h2 {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+main {
+    position: relative;
+    min-height: 85vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+li {
+    padding: 0.5em;
+    margin: 0.1em;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+    border-top: solid 2px #000;
+    font-size: 90%;
+    padding: 20px;
+    background-color: #003;
     color: white;
-    padding: 15px 15px 25px;
 }
 
-header h1{
-    margin: 0 0 10px;
+.error404 {
+    display: block;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18vh;
     text-align: center;
 }
 
-nav span,
-nav a{
-    margin-right: 20px;
-    font-size: 1.2em;
+header {
+    border-bottom: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #003;
+    color: white;
 }
-
-nav a{
+header a:link, header a:visited {
     color: white;
     text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+header a:hover {
+    background-color: white;
+    color: #000;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav:before {
+    content: '\2630';
 }
 
-body > ul {
-    width: 60%;
-    margin: 30px auto;
+ul.lines {
+    list-style-type: none;
 }
 
-body > ul li {
-    list-style-type:  "📍 ";
-    margin-bottom: 25px;
-    font-size: 1.2em;
+ul.stops {
+    width: 40%;
+    margin: 0 auto;
+    list-style-type: "\1F4CD";
+}
+ul.stops li {
+    padding: 10px 30px 5px 5px;
 }
 
-details{
-    margin: 10px auto;
-    width: 80%;
+details {
+    margin: 5px 0;
+}
+details summary {
+    padding: 10px;
     cursor: pointer;
 }
-
-summary{
-    padding: 5px;
-}
-
-details ul{
+details ul {
     background-color: white;
     color: black;
+    margin: 0 5px;
+    padding-bottom: 5px;
 }
 
-details li{
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/** Styles rajoutés au TP2 **/
+
+details li {
+    cursor: pointer;
+}
+#btnPrec, #btnNext {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+#btnPrec:before{
+    content: '\25C0';
+}
+#btnNext:before {
+    content: '\25B6';
+}
+label {
+    border: solid 1px #000;
+    display: inline-block;
+    margin: 0 1px 0 0;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    cursor: pointer;
+}
+label:has(input:checked) {
+    background-color: black;
+}
+input[name="radTrip"] {
+    display: none;
+}
+main table {
+    margin: 20px auto;
+}
+table td {
     padding: 5px;
+    border: solid 1px #000;
 }

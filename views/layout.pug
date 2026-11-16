@@ -1,0 +1,20 @@
+mixin menu()
+    nav 
+        a(href="/lignes") Lignes 
+        a(href="/stations") Stations 
+
+doctype html 
+html 
+    head 
+        meta(charset="UTF-8")
+        title= titre
+        link(rel="stylesheet",href="/style.css")
+        script(src="js/horaires.js")
+    body 
+        header 
+            h1= titre 
+            +menu()
+        main 
+            block content
+        footer &copy; Corrigé TPs - Module de Web4 - Licence 3e année - Année universitaire 2026-2027
+    

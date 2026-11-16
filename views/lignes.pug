@@ -1,13 +1,9 @@
-doctype html
-html
-  head
-    title Lignes du réseau Ginko
-    link(rel="stylesheet",href="style.css")
-  body
-    h1 Lignes du réseau Ginko 
+extends layout 
+
+block content 
     each route in routes
         details(style=`color: #${route.text_color}; background-color: #${route.color}`)
             summary #{route.short_name} - #{route.name}
-            ul 
-                each direction in route.directions 
-                    li Direction <em>#{direction}</em>
+            ul.lines 
+                each direction, index in route.directions 
+                    li(data-route=`${route.id}`, data-direction=`${index}`) Direction <em>#{direction}</em>
